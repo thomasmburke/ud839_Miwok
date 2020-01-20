@@ -3,9 +3,10 @@ package com.example.android.miwok;
 import java.util.ArrayList;
 
 public class Word {
+    private final static int NO_IMAGE_PROVIDED = -1;
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private int mImageId;
+    private int mImageId = NO_IMAGE_PROVIDED;
 
     /**
      * Create a new Word object.
@@ -36,6 +37,10 @@ public class Word {
 
     public int getImageId(){
         return mImageId;
+    }
+
+    public boolean hasImage(){
+        return mImageId != NO_IMAGE_PROVIDED;
     }
 
 }
