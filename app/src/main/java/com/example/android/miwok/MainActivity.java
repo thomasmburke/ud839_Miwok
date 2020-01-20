@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Use custom onClick class
+        //NumbersOnClickListener numbersOnClick = new NumbersOnClickListener();
+        //numbers.setOnClickListener(numbersOnClick);
+
         // Find the View that shows the family category
         TextView family = (TextView) findViewById(R.id.family);
 

@@ -17,12 +17,41 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class NumbersActivity extends AppCompatActivity {
+    private static final String TAG = "MyActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
+
+        // Create array of numbers
+        String [] numbersArr = new String[10];
+        ArrayList<String> numbersArrList = new ArrayList<String>();
+        Log.i(TAG, "size of ArrayList: "+ numbersArrList.size());
+        numbersArrList.addAll(Arrays.asList("one","two", "three", "four", "five","six", "seven", "eight", "nine", "ten"));
+        Log.i(TAG, "4th number is"+ numbersArrList.get(3));
+
+        ArrayAdapter<String> itemsAdapter =
+                new ArrayAdapter<String>(this, R.layout.activity_numbers, R.id.textItem, numbersArrList);
+        ListView listView = (ListView) findViewById(R.id.list);
+        listView.setAdapter(itemsAdapter);
+        /*
+        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
+        for (int i=0; i<numbersArrList.size(); i++){
+            TextView wordView = new TextView(this);
+            wordView.setText(numbersArrList.get(i));
+            rootView.addView(wordView);
+        }*/
     }
 }
