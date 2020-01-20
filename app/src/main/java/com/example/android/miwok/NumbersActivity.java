@@ -38,16 +38,16 @@ public class NumbersActivity extends AppCompatActivity {
         // Create array of numbers
         //String [] numbersArr = new String[10];
         ArrayList<Word> wordsArrList = new ArrayList<Word>();
-        wordsArrList.add(new Word("one","lutti"));
-        wordsArrList.add(new Word("two","otiiko"));
-        wordsArrList.add(new Word("three","tolookosu"));
-        wordsArrList.add(new Word("four","oyyisa"));
-        wordsArrList.add(new Word("five","massokka"));
-        wordsArrList.add(new Word("six","temmokka"));
-        wordsArrList.add(new Word("seven","kenekaku"));
-        wordsArrList.add(new Word("eight","kawinta"));
-        wordsArrList.add(new Word("nine","wo'e"));
-        wordsArrList.add(new Word("ten","na'aacha"));
+        wordsArrList.add(new Word("one","lutti", R.drawable.number_one));
+        wordsArrList.add(new Word("two","otiiko", R.drawable.number_two));
+        wordsArrList.add(new Word("three","tolookosu", R.drawable.number_three));
+        wordsArrList.add(new Word("four","oyyisa",R.drawable.number_four ));
+        wordsArrList.add(new Word("five","massokka", R.drawable.number_five));
+        wordsArrList.add(new Word("six","temmokka", R.drawable.number_six));
+        wordsArrList.add(new Word("seven","kenekaku", R.drawable.number_seven));
+        wordsArrList.add(new Word("eight","kawinta", R.drawable.number_eight));
+        wordsArrList.add(new Word("nine","wo'e", R.drawable.number_nine));
+        wordsArrList.add(new Word("ten","na'aacha",R.drawable.number_ten));
         //Log.i(TAG, "size of ArrayList: "+ numbersArrList.size());
         //numbersArrList.addAll(Arrays.asList("one","two", "three", "four", "five","six", "seven", "eight", "nine", "ten"));
         //Log.i(TAG, "4th number is"+ numbersArrList.get(3));

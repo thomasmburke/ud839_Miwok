@@ -5,8 +5,7 @@ import java.util.ArrayList;
 public class Word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private ArrayList<String> englishNumbers = new ArrayList<String>();
-    private ArrayList<String> miwokNumbers = new ArrayList<String>();
+    private int mImageId;
 
     /**
      * Create a new Word object.
@@ -15,9 +14,10 @@ public class Word {
      *                           (such as English)
      * @param miwokTranslation is the word in the Miwok language
      */
-    public Word(String defaultTranslation, String miwokTranslation){
+    public Word(String defaultTranslation, String miwokTranslation, int imageId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mImageId = imageId;
     }
 
     /**
@@ -32,6 +32,10 @@ public class Word {
      */
     public String getMiwokTranslation() {
         return mMiwokTranslation;
+    }
+
+    public int getImageId(){
+        return mImageId;
     }
 
 }
