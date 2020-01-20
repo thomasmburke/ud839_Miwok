@@ -36,16 +36,28 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         // Create array of numbers
-        String [] numbersArr = new String[10];
-        ArrayList<String> numbersArrList = new ArrayList<String>();
-        Log.i(TAG, "size of ArrayList: "+ numbersArrList.size());
-        numbersArrList.addAll(Arrays.asList("one","two", "three", "four", "five","six", "seven", "eight", "nine", "ten"));
-        Log.i(TAG, "4th number is"+ numbersArrList.get(3));
+        //String [] numbersArr = new String[10];
+        ArrayList<Word> wordsArrList = new ArrayList<Word>();
+        wordsArrList.add(new Word("one","lutti"));
+        wordsArrList.add(new Word("two","otiiko"));
+        wordsArrList.add(new Word("three","tolookosu"));
+        wordsArrList.add(new Word("four","oyyisa"));
+        wordsArrList.add(new Word("five","massokka"));
+        wordsArrList.add(new Word("six","temmokka"));
+        wordsArrList.add(new Word("seven","kenekaku"));
+        wordsArrList.add(new Word("eight","kawinta"));
+        wordsArrList.add(new Word("nine","wo'e"));
+        wordsArrList.add(new Word("ten","na'aacha"));
+        //Log.i(TAG, "size of ArrayList: "+ numbersArrList.size());
+        //numbersArrList.addAll(Arrays.asList("one","two", "three", "four", "five","six", "seven", "eight", "nine", "ten"));
+        //Log.i(TAG, "4th number is"+ numbersArrList.get(3));
 
-        ArrayAdapter<String> itemsAdapter =
-                new ArrayAdapter<String>(this, R.layout.activity_numbers, R.id.textItem, numbersArrList);
-        ListView listView = (ListView) findViewById(R.id.list);
-        listView.setAdapter(itemsAdapter);
+        //ArrayAdapter<Word> itemsAdapter =
+                //new ArrayAdapter<Word>(this, R.layout.list, R.id.textItem, numbersArrList);
+        WordAdapter wordsAdapter =
+                new WordAdapter(this, wordsArrList);
+        ListView listView = (ListView) findViewById(R.id.listview_words);
+        listView.setAdapter(wordsAdapter);
         /*
         LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
         for (int i=0; i<numbersArrList.size(); i++){
