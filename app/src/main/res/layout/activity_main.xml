@@ -45,5 +45,10 @@
         style="@style/CategoryStyle"
         android:background="@color/category_phrases"
         android:text="@string/category_phrases" />
+    <TextView
+        android:id="@+id/click_me"
+        android:text="click me!"
+        style="@style/CategoryStyle"/>
+
 
 </LinearLayout>

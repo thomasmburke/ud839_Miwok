@@ -7,6 +7,7 @@ public class Word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
     private int mImageId = NO_IMAGE_PROVIDED;
+    private int mAudioResourceId;
 
     /**
      * Create a new Word object.
@@ -15,10 +16,11 @@ public class Word {
      *                           (such as English)
      * @param miwokTranslation is the word in the Miwok language
      */
-    public Word(String defaultTranslation, String miwokTranslation, int imageId){
+    public Word(String defaultTranslation, String miwokTranslation, int imageId, int audioResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageId = imageId;
+        mAudioResourceId = audioResourceId;
     }
 
     /**
@@ -38,9 +40,23 @@ public class Word {
     public int getImageId(){
         return mImageId;
     }
+    public int getAudioResourceId(){
+        return mAudioResourceId;
+    }
 
     public boolean hasImage(){
         return mImageId != NO_IMAGE_PROVIDED;
     }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mImageId=" + mImageId +
+                ", mAudioResourceId=" + mAudioResourceId +
+                '}';
+    }
+
 
 }
