@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /*
         TextView clicker = (TextView) findViewById(R.id.click_me);
 
         clicker.setOnClickListener(new OnClickListener() {
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+         */
 
 
 
